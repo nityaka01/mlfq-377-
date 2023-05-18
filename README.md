@@ -31,4 +31,6 @@ We handle the interactive jobs and CPU intensive jobs through this.
 For the actual implementation of mlfq, this calls round robin. We have 4 priority queues q1, q2, q3, q4. Ideally, we can also parametrize this by making an array of queues and allowing for it to work on any number of priority queues. However, operating on 4 is sufficient for the purposes of this project. A while loop addresses the fact that every job starts out with a priority of 4. NOTE: in project 3, we are given a process structure, but we make modifications to this process structure by adding a field priority which comes useful in the algorithm. We then check while there exists some process remaining in either of our 4 queues, we check if all of the queues are not empty. The first queue which has a nomempty process will run that process for a time quanta. If the priority is updated, we check for that in our completed_and_rescheduled processes queue. Specfically, if the priority has been decremented, we will add that to its corresponding queue. 
 
 Our algorithm uses i/o when calling mlfq. The focus of this is to ultimately optimize both Tturnaround and Tresponse time. 
-Here is the link to the video: https://drive.google.com/file/d/1vVaF5qyo9N9r22rMq4mbSbcbW_MtdDXm/view 
+Here is the link to the video:[ https://drive.google.com/file/d/1vVaF5qyo9N9r22rMq4mbSbcbW_MtdDXm/view ](https://drive.google.com/file/d/1nLMFXmYvH2QL1wKHBBnVSNWMc2k4jd4c/view)
+
+https://drive.google.com/file/d/1nLMFXmYvH2QL1wKHBBnVSNWMc2k4jd4c/view
